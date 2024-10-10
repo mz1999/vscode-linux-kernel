@@ -11,8 +11,9 @@ Install C/C++ extension for Visual Studio Code (In VSCode, <kbd>Ctrl</kbd>+<kbd>
 Build your kernel first (important, it will generate some files that VSCode needed)
 
 ```sh
-make <your-defconfig> # usually in the arch/<arch>/configs/ folder
-make -j$(nproc)
+sudo apt install build-essential gdb flex bison libncurses-dev libssl-dev libelf-dev # install dependencies
+make defconfig
+make -j $(nproc)
 ```
 
 ## VSCode setup
